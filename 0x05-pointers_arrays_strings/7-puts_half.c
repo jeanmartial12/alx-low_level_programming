@@ -1,11 +1,14 @@
-#include "main.h"
+#include "holberton.h"
 #include "2-strlen.c"
+#include <stdio.h>
+#include "main.h"
 
 /**
  * puts_half - puts half of int
  *
  * @str: string to split
  */
+
 void puts_half(char *str)
 {
 	int i;
