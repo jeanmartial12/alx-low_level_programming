@@ -1,12 +1,11 @@
-#include "holberton.h"
-#include "2-strlen.c"
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
+#include "2-strlen.c"
 
 /**
- * puts_half - puts half of int
+ * rev_string - reverse a string value
  *
- * @str: string to split
+ * @s: string to print
  */
 
 void puts_half(char *str)
