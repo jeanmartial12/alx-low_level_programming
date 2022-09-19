@@ -1,40 +1,20 @@
 #include "main.h"
+#include <stdio.h>
+#include "2-strlen.c"
 /**
-* rev_string -> reserving a string
-* @s: parameter s
-*
-*Return: void
-*/
-
-void rev-string(char *s)
+ * rev_string - reverse a string value
+ *
+ * @s: string to print
+ */
+void rev_string(char *s)
 {
-char *start_c, *end_c, c;
-int i, count;
-int length = 0;
+	int i;
+	char t;
 
-for (i = 0; s[i]; i++)
-{
-length++;
-}
-
-count = length;
-
-start_c = s;
-end_c = s;
-
-for (i = 0; i < count - 1; i++)
-{
-end_c++;
-}
-
-for (i = 0; i < count / 2; i++)
-{
-
-c = *end_c;
-*end_c = *star_c;
-*start_c = c;
-
-start_c++;
-end_c--;
-}
+	for (i = 0; i < _strlen(s) / 2; i++)
+	{
+		t = s[i];
+		s[i] = s[_strlen(s) - i - 1];
+		s[_strlen(s) - i - 1] = t;
+	}
 }
