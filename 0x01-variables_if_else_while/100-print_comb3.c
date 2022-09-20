@@ -1,32 +1,40 @@
+100-print_comb3.c
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - program that prints all possible different combinations of 2 digits
- * Return: 0
- */
-int main(void)
+*
+*
+*Description: print
+*
+*
+*
+*/
+int main()
 {
-	int c = 0
-	int f_d;
-	int l_d;
-
-	while (c <= 99)
+	int n1 = 0, n2;
+	while(n1 <=9)
 	{
-		f_d = (c / 10 + '0');
-		l_d = (c % 10 + '0');
+		n2 = 0;
 
-		if (f_d < l_d)
+	{
+		n2 = 0;
+		while(n2 <= 9)
 		{
-			putchar(f_d);
-			putchar(l_d);
-		
-			if (c != 89)
+			if(n1 != n2 && n1 < n2)
+		{
+			putchar(n1 + 48);
+			putchar(n2 + 48);
+
+			if(n1 + n2 != 17)
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
-		c++;
+		++n2;
+		}
+		++n1;
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return 0;
 }
