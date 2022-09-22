@@ -1,25 +1,36 @@
-#include "main.h"
 #include <stdio.h>
-#include "2-strlen.c"
+#include "main.h"
 
 /**
- * rev_string - reverse a string value
+ * puts_half - prints a string
+ * @str: string to print
  *
- * @s: string to print
+ * Return: nothing
  */
 
 void puts_half(char *str)
-{
-	int i;
-	int oE = 0;
 
-	if (_strlen(str) % 2 != 0)
-	{
-		oE += 1;
-	}
-	for (i = (_strlen(str) + oE) / 2; i < _strlen(str); i++)
-	{
-		_putchar(str[i]);
-	}
-	_putchar('\n');
+{
+	int i, len = _strlen(str);
+
+	for (i = ((len - 1) / 2) + 1; i < len; i++)
+		putchar(*(str + i));
+	putchar(10);
+}
+
+/**
+* _strlen - returns the length of a string
+* @s: string
+*
+* Return: the length of the given string
+*/
+
+int _strlen(char *j)
+{
+	int len = 0;
+
+	while (*(j + len) != '\0')
+		len++;
+
+	return (len);
 }
