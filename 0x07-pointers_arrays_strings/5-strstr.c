@@ -1,44 +1,18 @@
-/*
- * File: 5-strstr.c
- * Auth: Someone who is kind
- */
-
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strstr - Locates a substring.
- * @haystack: The string to be searched.
- * @needle: The substring to be located.
+ * main - check the code
  *
- * Return: If the substring is located - a pointer to the beginning
- *
- *         If the substring is not located - NULL.
+ * Return: Always 0.
  */
-
-char *_strstr(char *haystack, char *needle)
+int main(void)
 {
-	 int index;
+	char *s = "hello, world";
+	char *f = "world";
+	char *t;
 
-	 if (*needle == 0)
-		return (haystack);
-
-	 while (*haystack)
-	 {
-		index = 0;
-
-		if (haystack[index] == needle[index])
-		{
-			do {
-				if (needle[index + 1] == '\0')
-					return (haystack); 
-
-				index++;
-
-			} while (haystack[index] == needle[index]); 
-		}
-
-		haystack++;
-	 }
-
-	 return ('\0');
+	t = _strstr(s, f);
+	printf("%s\n", t);
+	return (0);
 }
