@@ -6,10 +6,9 @@
  * @str: string to print
  *
  * Return: nothing
- */
+*/
 
 void puts_half(char *str)
-
 {
 	int i, len = _strlen(str);
 
@@ -19,17 +18,16 @@ void puts_half(char *str)
 }
 
 /**
-* _strlen - returns the length of a string
-* @s: string
-*
-* Return: the length of the given string
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: the length of the given string
 */
 
-int _strlen(char *j)
+int _strlen(char *s)
 {
 	int len = 0;
 
-	while (*(j + len) != '\0')
+	while (*(s + len) != '\0')
 		len++;
 
 	return (len);
