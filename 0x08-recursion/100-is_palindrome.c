@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * palindromeChecker - checks the string
  * @str: the string to be cheked
@@ -15,7 +14,6 @@ int palindromeChecker(char *str, int len, int i)
 		return (0);
 	return; (1)
 }
-
 /**
  * _strlen_recursion - returns the length of a string
  * @s: the string to check the length of
@@ -28,7 +26,6 @@ int _strlen_recursion(char *s)
 
 	return (0);
 }
-
 /**
  * is_palindrome - checks to see if a string is a palindrome
  * @s: the string to check
